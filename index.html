@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>3D Portfolio | Modern Developer</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.css" />
+    <link rel="stylesheet" href="style.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.4/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.4/ScrollTrigger.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.js"></script>
+</head>
+
+<body>
+    <!-- 3D Background -->
+    <canvas id="canvas3d"></canvas>
+
+    <!-- Floating elements -->
+    <div class="floating-elements" id="floating-elements"></div>
+    
+    <!-- scroll to top button -->
+    <button id="scrollToTop" title="Back to top">
+        <i class="fas fa-arrow-up"></i>
+      </button>
+      
+    <!-- header -->
+    <nav>
+        <a href="#" class="logo">Rajat Chugh | Frontend Developer</a>
+        <div class="hamburger" id="hamburger">
+            <i class="fas fa-bars"></i>
+        </div>
+        <div class="nav-links" id="nav-links">
+            <a href="#about" data-text="About">About</a>
+            <a href="#projects" data-text="Projects">Projects</a>
+            <a href="#contact" data-text="Contact">Contact</a>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="hero-content">
+            <h1>Hi, I'm <span>Rajat Chugh</span><br>Frontend Developer</h1>
+            <p>I'm a frontend developer who creates fast, responsive, and user-friendly websites using React.js and
+                modern tools.
+            </p>
+            <a href="#projects" class="btn">View My Work <i class="fas fa-arrow-right"></i></a>
+            <div class="social-icons">
+                <a href="https://github.com/RajatChugh2711" target="_blank"><i class="fab fa-github"></i></a>
+                <a href="https://www.linkedin.com/in/rajat-chugh-617908199/" target="_blank"><i
+                        class="fab fa-linkedin"></i></a>
+                <a href="https://x.com/RChugh27201" target="_blank"><i class="fab fa-twitter"></i></a>
+            </div>
+        </div>
+
+        <!-- Scroll Indicator -->
+        <div class="scroll-indicator" onclick="scrollToNextSection()">
+            <div class="mouse">
+                <div class="wheel"></div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section class="section" id="about">
+        <h2 class="section-title">About <span>Me</span></h2>
+        <div class="about-content">
+            <div class="about-img">
+                <div class="about-img-inner">
+                    <img src="./assets/portfolio-about.jpeg" alt="">
+                </div>
+            </div>
+            <div class="about-text">
+                <h3>Frontend Developer</h3>
+                <p>Result-driven frontend developer with expertise in React.js, Next.js, Redux, and TypeScript, skilled
+                    in building
+                    high-performance user interfaces and collaborating within Agile teams to deliver seamless web
+                    applications.</p>
+                <div class="skills">
+                    <span class="skill">React.js</span>
+                    <span class="skill">Redux</span>
+                    <span class="skill">Context APIs</span>
+                    <span class="skill">REST APIs</span>
+                    <span class="skill">TypeScript</span>
+                    <span class="skill">Javascript</span>
+                    <span class="skill">Payment Gateway</span>
+                    <span class="skill">ElectronJS</span>
+                    <span class="skill">Next.js</span>
+                    <span class="skill">MongoDB</span>
+                    <span class="skill">Node.js</span>
+                    <span class="skill">HTML5</span>
+                    <span class="skill">CSS3</span>
+                    <span class="skill">Responsive Web Design</span>
+                    <span class="skill">Webpack</span>
+                    <span class="skill">Git</span>
+                    <span class="skill">Github</span>
+                    <span class="skill">Postman</span>
+                    <span class="skill">Jira</span>
+                    <span class="skill">NPM/yarn</span>
+                    <span class="skill">BOOTSTRAP</span>
+                    <span class="skill">TAILWIND CSS</span>
+                    <span class="skill">MATERIAL UI</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section class="section" id="projects">
+        <h2 class="section-title">My <span>Projects</span></h2>
+        <div class="projects-grid swiper-container">
+            <div class="swiper-wrapper">
+                <div class="swiper-slide">
+                    <div class="project-card">
+                        <div class="project-img">
+                            <img src="./assets/car-parts.webp" alt="Project 1">
+                        </div>
+                        <div class="project-info">
+                            <h3>Motonexa</h3>
+                            <p>Developed responsive, user-friendly interfaces for garages and suppliers using React and
+                                TypeScript.</p>
+                            <p>Integrated real-time messaging via Socket.IO and WhatsApp communication using WATI APIs.
+                            </p>
+                            <p>Implemented role-based UI access and session handling integrated with Keycloak
+                                authentication.</p>
+                            <p>Consumed REST APIs to display dynamic order, RFQ, and tracking data with seamless user
+                                workflows.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="swiper-slide">
+                    <div class="project-card">
+                        <div class="project-img">
+                            <img src="./assets/massageChair.png" alt="Project 1">
+                        </div>
+                        <div class="project-info">
+                            <h3>Massage99</h3>
+                            <p>Built a booking interface for 500+ massage chairs with QR scan-to-pay functionality.</p>
+                            <p>Integrated payment gateway flows, reducing checkout time by 40%.
+                            </p>
+                            <p> Developed real-time status tracking, boosting user engagement and booking success rate
+                                by 30%.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="swiper-slide">
+                    <div class="project-card">
+                        <div class="project-img">
+                            <img src="./assets/medicines.webp" alt="Project 1">
+                        </div>
+                        <div class="project-info">
+                            <h3>Immunoact</h3>
+                            <p>Built responsive UIs to manage hospitals, doctors, patients, and multi-phase clinical
+                                trials.</p>
+                            <p> Integrated appointment workflows, patient tracking, and automated reporting interfaces.
+                            </p>
+                            <p> Developed real-time role-based chat using WebSockets for seamless in-app communication.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="swiper-slide">
+                    <div class="project-card">
+                        <div class="project-img">
+                            <img src="./assets/houseProperty.jpg" alt="Project 1">
+                        </div>
+                        <div class="project-info">
+                            <h3>FiveStone Taxwizard</h3>
+                            <p>Developed user interfaces to add property data and display real-time tax estimates based
+                                on dynamic formulas.</p>
+                            <p> Built interactive dashboards for tax calculation, visualization, and appeal filing.
+                            </p>
+                            <p>Integrated frontend workflows with backend APIs to automate court appeal submission and
+                                status tracking.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="swiper-button-prev"></div>
+            <div class="swiper-button-next"></div>
+            <!-- Optional pagination -->
+            <div class="swiper-pagination"></div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section class="section" id="contact">
+        <h2 class="section-title">Get In <span>Touch</span></h2>
+        <div class="contact-form">
+            <form>
+                <div class="form-group">
+                    <label for="name">Your Name</label>
+                    <input type="text" id="name" required placeholder="Enter your name">
+                </div>
+                <div class="form-group">
+                    <label for="email">Email Address</label>
+                    <input type="email" id="email" required placeholder="Enter your email">
+                </div>
+                <div class="form-group">
+                    <label for="message">Your Message</label>
+                    <textarea id="message" required placeholder="Hi Adrian, I'd like to talk about..."></textarea>
+                </div>
+                <button type="submit" class="submit-btn">Send Message <i class="fas fa-paper-plane"></i></button>
+            </form>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2025 Rajat Chugh's Portfolio. All rights reserved.</p>
+    </footer>
+
+    <script src="main.js"></script>
+</body>
+
+</html>
