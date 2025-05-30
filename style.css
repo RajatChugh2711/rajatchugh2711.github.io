@@ -219,6 +219,11 @@ nav {
     box-shadow: 0 15px 30px rgba(125, 211, 252, 0.3);
 }
 
+.download-cv .btn:hover .btn svg path {
+    fill: var(--accent) !important;
+    color: var(--accent) !important;
+    stroke: var(--accent) !important;
+}
 .social-icons {
     display: flex;
     gap: 1.5rem;
